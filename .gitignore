@@ -10,10 +10,12 @@ build*
 *.pyo
 
 # Data files
-*.csv
-*.xls
-*.xlsx
-*.gz
+src/input_files/*.csv
+src/input_files/*.xls
+src/input_files/*.xlsx
+src/input_files/bak/*.csv
+src/input_files/bak/*.xls
+src/input_files/bak/*.xlsx
 
 # SublimeSFTP
 

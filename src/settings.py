@@ -7,11 +7,11 @@
 # This file is part of the pg-data-loader distribution.
 #   (https://github.com/dr-prodigy/pg-data-loader)
 #
-# FEEL is free software: you can redistribute it and/or modify
+# pg-data-loader is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Lesser General Public License as
 # published by the Free Software Foundation, version 3.
 #
-# FEEL is distributed in the hope that it will be useful, but
+# pg-data-loader is distributed in the hope that it will be useful, but
 # WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 # Lesser General Public License for more details.
@@ -66,14 +66,39 @@ IMPORT_CONFIGS = {
                     'rebuild_table': True,
                     'skip_rows_until': None,
                     'skip_rows': 0,
-                    'delimiter': ';',
+                    'delimiter': ',',
                     'quotes': '',
                     'db_columns':
                         ['dates1', 'numerics', 'dates2', 'ints', 'strings'],
                     'csv_columns':
                         [0, 1, 2, 3, 4],
                     'values':
-                        ['dateDMY', 'numeric,', 'dateDMY', 'numeric,', 'string8859-1'],
+                        ['xldate', 'numeric,', 'xldate', 'numeric,', 'string8859-1'],
+                    'table_create':
+                        """create table {}
+                        (
+                        dates1 date,
+                        numerics numeric,
+                        dates2 date,
+                        ints integer,
+                        strings text
+                        );"""
+                },
+                'XLSX_LOADER_SAMPLE':
+                {
+                    'file_name': '*xlsx_loader_sample.xlsx',
+                    'table_name': 'xlsx_loader_sample',
+                    'rebuild_table': True,
+                    'skip_rows_until': None,
+                    'skip_rows': 0,
+                    'delimiter': ',',
+                    'quotes': '',
+                    'db_columns':
+                        ['dates1', 'numerics', 'dates2', 'ints', 'strings'],
+                    'csv_columns':
+                        [0, 1, 2, 3, 4],
+                    'values':
+                        ['xldate', 'numeric,', 'xldate', 'numeric,', 'string8859-1'],
                     'table_create':
                         """create table {}
                         (
