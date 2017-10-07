@@ -1,0 +1,45 @@
+# Prodigys conventions
+
+*virtualenv*
+venv
+media
+sessions
+build*
+.*-cache
+*.pyc
+*.pyo
+
+# Data files
+*.csv
+*.xls
+*.xlsx
+*.gz
+
+# SublimeSFTP
+
+sftp-config.json
+
+# Local project
+
+.settings_local.py.*
+
+# Mac OS X
+*.DS_Store
+
+# IDEs
+.settings
+.project
+.idea
+.pydevproject
+*.sublime-*
+bower_components
+node_modules
+
+
+# Project
+settings_local.py
+settings.config
+/.vs
+
+# Log
+*.log
