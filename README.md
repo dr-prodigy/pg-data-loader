@@ -25,7 +25,7 @@ Steps for running:
 ```
 - install requirements
 ```
-..../pg-data-loader $ pip install requirements/requirements.txt
+..../pg-data-loader $ pip install -r requirements/requirements.txt
 ```
 - create postgreSQL user / db with given params (my_user, my_db ...)
 - copy sample files into ..../pg-data-loader/src/input_files
